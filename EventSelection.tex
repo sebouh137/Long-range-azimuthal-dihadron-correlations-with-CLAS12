@@ -1,0 +1,42 @@
+\section{Event Selection} \label{sec:eventselection}
+The first step in the analysis is creating tuples in ROOT, which use the event selection criteria in Secs.~\ref{sec:electron_selection} and 
+\label{sec:hadron_selection}.  Further analysis cuts are described in Sec.~\ref{sec:analysis_selection}
+% Note: these are preliminary cuts.  The cut list will be updated to follow \cite{RGANote}:
+\subsection{Electron Selection}
+\label{sec:electron_selection}
+The electron identification uses the following cuts:
+
+\begin{itemize}
+    \item The EC fraction, $E_{\rm EC}/p$, is at least 0.17
+    \item The energy measured in the PCAL is at least 0.07 GeV
+    \item The vertex position is between $-$13 and 12 mm ($-$18 and 10 mm) for data with in-bending (out-bending) torus field.  
+    \item The tracks are in the fiducial part of the drift chamber and the PCAL.  
+    \item The particle's charge is negative.
+\end{itemize}
+
+
+In order to select deep-inelastic-scattering (DIS) events, we require the following kinematic cuts:
+\begin{itemize}
+    %\renewcommand\labelitemi{$\bullet$}
+    \item four-momentum transfer: $Q^2>1$ GeV$^2/c^2$
+    \item hadronic-system mass: $W>2$ GeV$/c^2$
+    \item energy loss fraction: $y_e\equiv \nu/E<0.85$
+\end{itemize}
+
+\subsection{Hadron selection}
+\label{sec:hadron_selection}
+To identify hadrons, we use the following cuts:
+\begin{itemize}
+    %\renewcommand\labelitemi{$\bullet$}
+    \item Goodness of pid: \texttt{chi2pid}$<2.5$
+    \item The difference in vertex positions in $z$ between the hadron candidate and the electron is less than 20 mm.  
+    \item The difference in time between the electron and the hadron candidate (after subtracting the pathlength divided by the velocity calculated using the momentum and the PDG mass of the particle) is less than 0.3 ns
+    \item The particle is in the fiducial part of the drift chamber.  
+\end{itemize}
+
+\subsection{Analysis selection cuts}
+\label{sec:analysis_selection}
+In addition to the tuple creation criteria, we make the following analysis cuts:
+\begin{itemize}
+    \item For $\pi p$ events, we require the missing mass $m_{X}(ep\rightarrow eh_1X)$ to be at least 1.665 GeV.  This avoids events where the proton is a decay product of a $\Delta$ resonance, the mass of which is 1.232 GeV$/c^2$.  This cut is chosen to be approximately 3 sigma above the resonance mass.  
+\end{itemize}

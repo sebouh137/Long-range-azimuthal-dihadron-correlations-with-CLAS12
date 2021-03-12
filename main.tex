@@ -1,0 +1,98 @@
+\documentclass[H1,manyauthors]{ALICE_analysis_notes}
+%\documentclass[ALICE,manyauthors]{ALICE_scientific_notes}
+%
+
+\usepackage{cite}
+\usepackage[toc,page]{appendix}
+
+\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}}
+\newcommand{\ptreco}{\ensuremath{p_{\mathrm{T}}^{\mathrm{reco}}}}
+\newcommand{\pttruth}{\ensuremath{p_{\mathrm{T}}^{\mathrm{true}}}}
+\newcommand{\pttrack}{\ensuremath{p_{\mathrm{T}}^{\mathrm{track}}}}
+\newcommand{\ptjet}{\ensuremath{p_{\mathrm{T}}^{\mathrm{jet}}}}
+\newcommand{\ptgamma}{\ensuremath{p_{\mathrm{T}}^{\mathrm{\gammaiso}}}}
+\newcommand{\ptcluster}{\ensuremath{p_{\mathrm{T}}^{\mathrm{cluster}}}}
+
+
+\newcommand{\etajetlab}{\ensuremath{\eta_{\mathrm{lab}}^{\mathrm{jet}}}}
+
+
+\newcommand{\slfrac}[2]{\left.#1\right/#2}
+\usepackage{rotating}
+\usepackage{placeins}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+%\usepackage{subcaption}
+\usepackage{lipsum}
+\usepackage{lineno}
+\usepackage[colorlinks=true,citecolor=blue]{hyperref}
+\usepackage{multirow}
+%\usepackage{authblk}
+
+\usepackage{textcomp}
+%\usepackage{lmodern}  % for bold teletype font
+\usepackage{amsmath}  % for \hookrightarrow
+\usepackage{xcolor}   % for \textcolor
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\linenumbers
+\begin{document}%
+%%%%%%%%%%%%% ptdr definitions %%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{titlepage}
+%
+\PHnumber{v1.0}
+\PHdate{\today}
+%
+%%% Put your own title + short title here:
+\title{Long-range azimuthal di-hadron correlations with CLAS12}
+\ShortTitle{Long-range azimuthal di-hadron correlations with CLAS12}   % appears on right page headers
+%
+
+
+\author{Sebouh Paul and Miguel Arratia}
+
+
+
+%
+\begin{abstract}
+We present a study of long-range azimuthal dihadron correlations with CLAS12. 
+\end{abstract}
+\end{titlepage}
+\tableofcontents
+\input{Intro}
+\input{Datasets}
+\input{EventSelection}
+\input{DataMCcomparison}
+\input{CorrelationFunctions}
+\input{EventMixing}
+\input{Systematics}
+\input{Validation}
+\input{Results}
+\input{Conclusions}
+
+\FloatBarrier
+%\newpage
+ \begin{appendices}
+ \appendix
+ %\input{Reproducibility}
+ \end{appendices}
+\FloatBarrier
+
+
+\renewcommand\refname{Bibliography}
+\bibliographystyle{unsrt} % or try abbrvnat or unsrtnat
+\bibliography{biblio} % refers to example.bib
+
+
+\end{document}
+
