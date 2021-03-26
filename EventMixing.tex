@@ -1,8 +1,17 @@
 \section{Event Mixing}
 The mixed event sample was produced combining the electron and pion in a ``trigger'' event with a hadron from another event (the ``associated'' event).  Both the trigger event and the associated event were required to have a DIS electron and a hadron which satisfy the requirements in Sec.~\ref{sec:eventselection}.  For the trigger event, the hadron was required to be a pion with at least $z>0.4$. However, neither the trigger event nor the associated event were required to have more than one hadron.  
 
+% Since the trigger and associated events may have very different electron kinematics, we have implemented cuts to ensure that the electron kinematics are similar between the trigger and associated events.  These are summarized below:
+% \begin{itemize}
+%     \item To ensure that the two events have nearly the same $z$ axis, we require $\sqrt(\Delta\theta_q^2+\sin(\theta_{q,\rm avg})\Delta\phi_q^2 < 3\degree$, where $\theta_q$ and $\phi_q$ are polar and azimuthal angles of the momentum transfer $\vec q$
+%     \item the difference in $x_B$ between the two events is less than 0.1.  
+% \end{itemize}
+
 
 All kinematic variables that depend on the associated hadron's kinematics and also the kinematics of the electron and/or trigger pion were recalculated using the kinematics of the associated hadron of the associated event and the electron and trigger pion of the trigger event.  Such variables include $z_2$, $\phi^{\rm cm}_2$, $\Delta\phi_{\rm cm}$, $m_{\rm pair}$, etc.  
+
+A validation test of the event mixing procedure is given in Sec.~\ref{sec:validation_mixing}
+
 
 
 
